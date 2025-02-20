@@ -1,0 +1,315 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 1rem;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.loading-text, .error-text {
+  text-align: center;
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  border-radius: 8px;
+}
+
+.loading-text {
+  background: rgba(66, 153, 225, 0.1);
+  color: #2b6cb0;
+}
+
+.error-text {
+  background: rgba(245, 101, 101, 0.1);
+  color: #c53030;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* User Profile */
+.profile {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 2px solid #e2e8f0;
+}
+
+.user-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  font-size: 1rem;
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.bio {
+  color: #718096;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Repository List */
+.repo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: none;
+  overflow-y: visible;
+}
+
+.repo-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.2rem;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+}
+
+.repo-card:hover {
+  background: #f8fafc;
+}
+
+.repo-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.repo-description {
+  font-size: 0.9rem;
+  color: #718096;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* README Viewer */
+.readme-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.readme-title {
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #2d3748;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.readme-content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #24292e;
+  overflow-x: auto;
+}
+
+.readme-content h1,
+.readme-content h2,
+.readme-content h3,
+.readme-content h4,
+.readme-content h5,
+.readme-content h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.readme-content h1 { font-size: 1.5rem; }
+.readme-content h2 { font-size: 1.3rem; }
+.readme-content h3 { font-size: 1.1rem; }
+.readme-content h4 { font-size: 1rem; }
+.readme-content h5 { font-size: 0.9rem; }
+.readme-content h6 { font-size: 0.8rem; }
+
+.readme-content p {
+  margin-bottom: 1rem;
+}
+
+.readme-content a {
+  color: #0366d6;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.readme-content a:hover {
+  text-decoration: underline;
+}
+
+.readme-content code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  word-break: break-word;
+}
+
+.readme-content pre {
+  padding: 1rem;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+.readme-content pre code {
+  padding: 0;
+  background: none;
+}
+
+.readme-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+.readme-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.readme-content table th,
+.readme-content table td {
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.readme-content table tr:nth-child(2n) {
+  background-color: #f8fafc;
+}
+
+/* Responsive Breakpoints */
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  .page {
+    padding: 1.5rem;
+  }
+
+  .main {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+
+  .repo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .readme-container {
+    padding: 1.5rem;
+  }
+
+  .readme-content {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  .page {
+    padding: 2rem;
+  }
+
+  .main {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+
+  .repo-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  .readme-container {
+    padding: 2rem;
+  }
+
+  .readme-content {
+    font-size: 1rem;
+  }
+}
