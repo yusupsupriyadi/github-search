@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitHub Repository Explorer
 
-## Getting Started
+A modern web application built with Next.js that allows users to explore GitHub repositories and their contents. This application provides an intuitive interface to search for GitHub users, view their repositories, and read repository README files.
 
-First, run the development server:
+## Features
 
+- 🔍 Search for GitHub users
+- 👤 View user profiles with avatar and bio
+- 📚 Browse user repositories with descriptions and star counts
+- 📖 Read repository README files in a clean format
+- 🌙 Dark mode support
+- 📱 Fully responsive design
+- ⚡ Fast and efficient with server-side API handling
+
+## Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Styling**: Pure CSS with CSS Modules
+- **API**: GitHub REST API
+
+## Prerequisites
+
+Before you begin, ensure you have:
+- Node.js 18.17 or later
+- A GitHub Personal Access Token (for API access)
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd github-search
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file in the root directory:
+```env
+GITHUB_TOKEN=your_github_personal_access_token
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+github-search/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── github/
+│   │   │       └── route.ts      # GitHub API proxy endpoints
+│   │   ├── favicon.ico           # Website favicon
+│   │   ├── layout.tsx            # Root layout component
+│   │   ├── opengraph-image.png   # OpenGraph image for social sharing
+│   │   └── page.tsx              # Main application page
+│   ├── components/               # Reusable React components
+│   │   ├── SearchBar.tsx         # User search component
+│   │   ├── UserProfile.tsx       # User profile display
+│   │   ├── RepoList.tsx          # Repository list component
+│   │   └── ReadmeViewer.tsx      # README content viewer
+│   ├── store/                    # State management
+│   │   └── githubStore.ts        # Zustand store configuration
+│   └── styles/                   # Styling
+│       ├── globals.css           # Global styles
+│       ├── SearchBar.module.css  # Search bar styles
+│       ├── UserProfile.module.css # User profile styles
+│       ├── RepoList.module.css   # Repository list styles
+│       ├── ReadmeViewer.module.css # README viewer styles
+│       └── page.module.css       # Main page styles
+├── public/                       # Static assets
+├── .env.local                    # Environment variables
+└── package.json                  # Project dependencies and scripts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Integration
 
-## Deploy on Vercel
+The application uses the GitHub REST API v3 with the following endpoints:
+- `/users/{username}` - Get user information
+- `/users/{username}/repos` - List user repositories
+- `/repos/{owner}/{repo}/readme` - Get repository README
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All API requests are proxied through Next.js API routes to secure the GitHub token.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## State Management
+
+Zustand is used for state management with the following store structure:
+- `user`: Current GitHub user data
+- `repos`: List of user repositories
+- `selectedRepo`: Currently selected repository
+- `isLoading`: Loading state indicator
+- `error`: Error message state
+
+## Styling
+
+The application uses CSS Modules for component-specific styling with:
+- Responsive grid layouts
+- Flexbox for component alignment
+- CSS variables for theming
+- Media queries for responsive design
+
+## Performance Optimization
+
+- Server-side API request handling
+- Efficient state management with Zustand
+- Optimized images and fonts
+- Lazy loading for README content
+- Responsive design practices
+
+## Error Handling
+
+The application implements comprehensive error handling:
+- API request failures
+- User not found scenarios
+- Repository access errors
+- README parsing issues
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Next.js team for the amazing framework
+- GitHub for their comprehensive API
+- Zustand team for the state management solution
