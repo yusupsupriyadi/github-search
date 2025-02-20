@@ -1,0 +1,105 @@
+.readmeContainer {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  color: #24292e;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #24292e;
+}
+
+.content :global(h1),
+.content :global(h2),
+.content :global(h3),
+.content :global(h4),
+.content :global(h5),
+.content :global(h6) {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.content :global(p) {
+  margin-bottom: 16px;
+}
+
+.content :global(a) {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.content :global(a:hover) {
+  text-decoration: underline;
+}
+
+.content :global(code) {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.content :global(pre) {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.content :global(pre code) {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.content :global(img) {
+  max-width: 100%;
+  height: auto;
+}
+
+.content :global(ul),
+.content :global(ol) {
+  padding-left: 2em;
+  margin-bottom: 16px;
+}
+
+.content :global(table) {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.content :global(table th),
+.content :global(table td) {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.content :global(table tr) {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.content :global(table tr:nth-child(2n)) {
+  background-color: #f6f8fa;
+}
